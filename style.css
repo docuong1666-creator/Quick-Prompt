@@ -1,0 +1,203 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 340px;
+  font-family: sans-serif;
+  font-size: 13px;
+  color: #111;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #378ADD;
+}
+
+.header span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.content {
+  padding: 14px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.prompt-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.prompt-item:hover {
+  background: #f5f5f5;
+}
+
+.prompt-name {
+  flex: 1;
+  font-size: 13px;
+}
+
+.prompt-item button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #aaa;
+  font-size: 14px;
+  padding: 2px 4px;
+}
+
+.prompt-item button:hover {
+  color: #333;
+}
+
+#add-btn {
+  width: 100%;
+  padding: 9px;
+  font-size: 13px;
+  background: white;
+  border: 1px dashed #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #888;
+  margin-top: 4px;
+}
+
+#add-btn:hover {
+  background: #f5f5f5;
+  color: #333;
+}
+
+label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #888;
+  margin-bottom: -4px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 9px 12px;
+  font-size: 13px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  font-family: sans-serif;
+}
+
+input:focus, textarea:focus {
+  border-color: #378ADD;
+}
+
+textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.form-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.form-actions button {
+  flex: 1;
+  padding: 9px;
+  font-size: 13px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#cancel-btn {
+  background: white;
+  border: 1px solid #ddd;
+  color: #555;
+}
+
+#cancel-btn:hover {
+  background: #f5f5f5;
+}
+
+#save-btn {
+  background: #378ADD;
+  border: none;
+  color: white;
+  font-weight: 500;
+}
+
+#save-btn:hover {
+  background: #2563eb;
+}
+
+#output {
+  margin-top: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  padding: 10px 12px;
+  background: #f5f5f5;
+  border-radius: 8px;
+}
+
+#copy-btn {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #888;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px 0;
+  display: block;
+}
+
+#copy-btn:hover {
+  color: #333;
+}
+
+#settings-btn {
+  margin-left: auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 2px 4px;
+  color: #888;
+}
+
+#settings-btn:hover {
+  color: #333;
+}
+
+#apikey-hint {
+  font-size: 12px;
+  color: #888;
+  margin-top: -4px;
+}
+
+#apikey-hint a {
+  color: #378ADD;
+  text-decoration: none;
+}
+
+#apikey-hint a:hover {
+  text-decoration: underline;
+}

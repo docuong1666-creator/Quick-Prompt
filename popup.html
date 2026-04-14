@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <div id="main-screen">
+      <div class="header">
+        <div class="dot"></div>
+        <span>Quick Prompt</span>
+        <button id="settings-btn">⚙️</button>
+      </div>
+      <div class="content">
+        <div id="prompt-list"></div>
+        <button id="add-btn">+ Add prompt</button>
+      </div>
+    </div>
+
+    <div id="form-screen" style="display:none;">
+      <div class="header">
+        <span id="form-title">New Prompt</span>
+      </div>
+
+      <div class="content">
+        <label>Title</label>
+        <input type="text" id="input-title" placeholder="e.g. Summarize in English">
+
+        <label>Prompt content</label>
+        <textarea id="input-content" placeholder="e.g. Summarize this page in English in 3 bullet points"></textarea>
+
+        <div class="form-actions">
+          <button id="cancel-btn">Cancel</button>
+          <button id="save-btn">Save</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="settings-screen" style="display:none;">
+      <div class="header">
+        <span>Settings</span>
+      </div>
+      <div class="content">
+        <label>Groq API Key</label>
+        <input type="password" id="input-apikey" placeholder="Enter your Groq API key">
+        <p id="apikey-hint">Get your free API key at <a href="https://console.groq.com" target="_blank">console.groq.com</a></p>
+        <div class="form-actions">
+          <button id="settings-cancel-btn">Cancel</button>
+          <button id="settings-save-btn">Save</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
+
