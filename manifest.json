@@ -18,7 +18,6 @@
     }
   },
   "permissions": ["activeTab", "scripting", "storage"],
-  "host_permissions": ["https://api.groq.com/"],
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
