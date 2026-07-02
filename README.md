@@ -67,3 +67,12 @@ Quick Prompt does not collect any personal data. All prompts and API keys are st
 ## License
 
 MIT License — feel free to use and modify!
+
+## Changelog
+
+### v1.1
+- Added model selector in Settings
+- GPT OSS 120B is now the default model
+
+### v1.0
+- Initial release

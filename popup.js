@@ -7,8 +7,7 @@ const inputTitle = document.getElementById("input-title");
 const inputContent = document.getElementById("input-content");
 const settingsScreen = document.getElementById("settings-screen");
 const inputApiKey = document.getElementById("input-apikey");
-
-
+const inputModel = document.getElementById("input-model");
 
 let editingId = null;
 
@@ -72,9 +71,10 @@ function showSettings() {
   formScreen.style.display = "none";
   settingsScreen.style.display = "block";
 
-  chrome.storage.local.get("apiKey", (data) => {
-    if (data.apiKey) inputApiKey.value = data.apiKey;
-  });
+  chrome.storage.local.get(["apiKey", "model"], (data) => {
+  if (data.apiKey) inputApiKey.value = data.apiKey;
+  if (data.model) inputModel.value = data.model;
+});
 }
 
 function openEditForm(prompt) {
@@ -103,7 +103,7 @@ async function runPrompt(prompt) {
   if (oldCopyBtn) oldCopyBtn.remove();
 
   try {
-    const data = await chrome.storage.local.get("apiKey");
+    const data = await chrome.storage.local.get(["apiKey", "model"]);
     if (!data.apiKey) {
       output.textContent = "No API key found. Please go to Settings ⚙️ and enter your Groq API key.";
       return;
@@ -120,7 +120,7 @@ async function runPrompt(prompt) {
         "Authorization": `Bearer ${data.apiKey}`
       },
       body: JSON.stringify({
-        model: "llama-3.3-70b-versatile",
+        model: data.model || "openai/gpt-oss-120b",
         max_tokens: 1024,
         messages: [
           {
@@ -178,14 +178,15 @@ document.getElementById("settings-cancel-btn").addEventListener("click", () => {
 
 document.getElementById("settings-save-btn").addEventListener("click", () => {
   const apiKey = inputApiKey.value.trim();
+  const model = inputModel.value.trim();
 
   if (!apiKey) {
     alert("Please enter your API key.");
     return;
   }
 
-  chrome.storage.local.set({ apiKey }, () => {
-    alert("API key saved!");
+  chrome.storage.local.set({ apiKey, model }, () => {
+    alert("Settings saved!");
     showMain();
   });
 });
