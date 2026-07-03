@@ -120,7 +120,7 @@ async function runPrompt(prompt) {
         "Authorization": `Bearer ${data.apiKey}`
       },
       body: JSON.stringify({
-        model: data.model || "openai/gpt-oss-120b",
+        model: data.model || "llama-3.3-70b-versatile",
         max_tokens: 1024,
         messages: [
           {

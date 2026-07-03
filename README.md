@@ -9,6 +9,8 @@ A Chrome Extension that lets you save your favorite AI prompts and run them on a
 - ✏️ Edit or delete prompts anytime
 - 🌍 Works in any language
 - 🔑 Use your own free Groq API key
+🤖 Choose from multiple AI models
+
 
 ## Demo
 
@@ -33,14 +35,27 @@ git clone https://github.com/docuong1666-creator/Quick-Prompt.git
 
 1. Get a free API key at [console.groq.com](https://console.groq.com)
 2. Click the Quick Prompt icon in your toolbar
-3. Click ⚙️ Settings → enter your Groq API key → Save
+3. Click ⚙️ Settings → choose your preferred AI model, enter your Groq API key → Save
 4. Add your prompts and start using!
+
 
 ## How to Use
 
 1. Open any webpage
 2. Click the Quick Prompt icon
 3. Click any saved prompt → AI will analyze the page and respond instantly
+
+
+## Available Models
+ 
+| Model | Speed | Best For |
+|-------|-------|----------|
+| Llama 3.3 70B | Fast | Best overall quality (Recommended) |
+| GPT OSS 120B | Fast | Alternative option |
+| GPT OSS 20B | Very Fast | When speed matters |
+| Llama 4 Scout 17B | Very Fast | High rate limits backup |
+| Llama 3.1 8B | Fastest | Quick tasks, low rate limits |
+
 
 ## Example Prompts
 
@@ -55,7 +70,7 @@ git clone https://github.com/docuong1666-creator/Quick-Prompt.git
 ## Tech Stack
 
 - **Frontend:** HTML, CSS, JavaScript
-- **API:** [Groq API](https://groq.com) (llama-3.3-70b-versatile)
+- **API:** [Groq API](https://groq.com) (Llama 3.3 70B by default)
 - **Storage:** chrome.storage.local
 
 ## Privacy
@@ -69,10 +84,15 @@ Quick Prompt does not collect any personal data. All prompts and API keys are st
 MIT License — feel free to use and modify!
 
 ## Changelog
+ 
+### v1.2
+- Added more model options
+- Llama 3.3 70B is now the recommended default model
 
 ### v1.1
 - Added model selector in Settings
 - GPT OSS 120B is now the default model
+
 
 ### v1.0
 - Initial release
