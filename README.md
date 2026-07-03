@@ -9,7 +9,7 @@ A Chrome Extension that lets you save your favorite AI prompts and run them on a
 - ✏️ Edit or delete prompts anytime
 - 🌍 Works in any language
 - 🔑 Use your own free Groq API key
-🤖 Choose from multiple AI models
+- 🤖 Choose from multiple AI models
 
 
 ## Demo
